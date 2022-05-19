@@ -1,4 +1,4 @@
-package com.mrsv.android.nttdata_becamobile_android_moviecatalog.services
+package com.mrsv.android.nttdata_becamobile_android_moviecatalog.data
 
 import com.mrsv.android.nttdata_becamobile_android_moviecatalog.models.MovieResponse
 import retrofit2.Call

@@ -1,17 +1,18 @@
-package com.mrsv.android.nttdata_becamobile_android_moviecatalog
+package com.mrsv.android.nttdata_becamobile_android_moviecatalog.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mrsv.android.nttdata_becamobile_android_moviecatalog.view.adapter.MovieAdapter
+import com.mrsv.android.nttdata_becamobile_android_moviecatalog.R
 import com.mrsv.android.nttdata_becamobile_android_moviecatalog.models.Movie
 import com.mrsv.android.nttdata_becamobile_android_moviecatalog.models.MovieResponse
-import com.mrsv.android.nttdata_becamobile_android_moviecatalog.services.MovieApiInterface
-import com.mrsv.android.nttdata_becamobile_android_moviecatalog.services.MovieApiService
+import com.mrsv.android.nttdata_becamobile_android_moviecatalog.data.MovieApiInterface
+import com.mrsv.android.nttdata_becamobile_android_moviecatalog.data.MovieApiService
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.create
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,20 +1,21 @@
-package com.mrsv.android.nttdata_becamobile_android_moviecatalog
+package com.mrsv.android.nttdata_becamobile_android_moviecatalog.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.mrsv.android.nttdata_becamobile_android_moviecatalog.R
 import com.mrsv.android.nttdata_becamobile_android_moviecatalog.models.Movie
 import kotlinx.android.synthetic.main.movie_item.view.*
 
 class MovieAdapter(
-    private val movies : List<Movie>
-) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>(){
+    private val movies: List<Movie>
+) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
-    class MovieViewHolder(view : View) : RecyclerView.ViewHolder(view){
+    class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
-        fun bindMovie(movie : Movie){
+        fun bindMovie(movie: Movie) {
             itemView.movie_title.text = movie.title
             itemView.movie_release_date.text = movie.release
             Glide.with(itemView).load(IMAGE_BASE + movie.poster).into(itemView.movie_poster)
@@ -32,5 +33,4 @@ class MovieAdapter(
     }
 
     override fun getItemCount(): Int = movies.size
-
 }
